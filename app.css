@@ -1,0 +1,6 @@
+body {background-color: black;}
+table {line-height:0px; vertical-align: middle;}
+table tr {height:200px;}
+table a {display:block; width: 100%; height:100%; line-height: 0px; color: white;}
+.eject-p {margin-top:100px;text-align:center;}
+.eject-p a {font-size: 10em; color: white; text-decoration: none;}

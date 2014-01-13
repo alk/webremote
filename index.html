@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>remote</title>
+<link rel="stylesheet" type="text/css" href="app.css">
+<link href="font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" style="width:100%;text-align:center;">
+<tr><td style="width:33%;"><td style="width:33%;"><a href="/KEY_VOLUMEUP"><i class="fa fa-5x fa-volume-up"></i></a><td style="width:33%;"></tr>
+<tr><td><a href="/KEY_REWIND"><i class="fa fa-5x fa-backward"></i></a><td><a href="/KEY_PLAYPAUSE"><i class="fa fa-5x fa-play"></i><i class="fa fa-5x fa-stop"></i></a><td><a href="/KEY_FORWARD"><i class="fa fa-5x fa-forward"></i></a></tr>
+<tr><td><td><a href="/KEY_VOLUMEDOWN"><i class="fa fa-5x fa-volume-down"></i></a><td></tr>
+</table>
+<p class="eject-p"><a class="fa fa-eject" href="/KEY_MENU"></a></p>
+<script src="jquery.js"></script>
+<script>
+$(function () {
+  $("a").live("click", function (ev) {
+    var action = $(this).attr("href");
+    ev.preventDefault();
+    $.post(action, "");
+  });
+});
+</script>
+</body>
+</html>
