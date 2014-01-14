@@ -1,0 +1,41 @@
+begin
+remote = webremote
+prog = mplayer
+button = KEY_PLAYPAUSE
+config = pause
+end
+
+begin
+remote = webremote
+prog = mplayer
+button = KEY_MENU
+config = quit
+end
+
+begin
+remote = webremote
+prog = mplayer
+button = KEY_VOLUMEDOWN
+config = volume -1
+end
+
+begin
+remote = webremote
+prog = mplayer
+button = KEY_VOLUMEUP
+config = volume +1
+end
+
+begin
+remote = webremote
+prog = mplayer
+button = KEY_REWIND
+config = seek -30 0
+end
+
+begin
+remote = webremote
+prog = mplayer
+button = KEY_FORWARD
+config = seek +30 0
+end
