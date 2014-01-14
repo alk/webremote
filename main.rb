@@ -10,10 +10,13 @@ class Server < Sinatra::Base
   set :port, 80
   set :public_folder, File.expand_path(File.dirname(__FILE__))
   set :static_cache_control, [:public, :max_age => 3650*24*3600]
-  set :logging, false
+  # set :logging, false
 
   def do_action(key)
     args = ["irsend", "simulate", "%016x 1 %s webremote" % [key.hash % 0x1000_0000, key]]
+    puts args.inspect
+    system(*args)
+    args = ["irsend", "simulate", "%016x 0 %s webremote" % [key.hash % 0x1000_0000, key]]
     puts args.inspect
     system(*args)
   end
