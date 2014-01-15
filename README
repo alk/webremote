@@ -1,0 +1,13 @@
+What
+-----
+
+You visit your mplayer box web service in mobile phone's browser, and
+you see simple remote control UI. "Button" presses are sent to lircd
+which propagates them to various clients including mplayer.
+
+
+How
+----
+
+You'll need to pass --allow-simulate to lircd. Rest is irrelevant
+(there's no need to set up any real remotes).
